@@ -44,9 +44,6 @@ public class MainActivity extends AppCompatActivity {
 		initData();
 		leftAdapter=new LeftAdapter(drugBeanList);
 		rightAdapter=new RightAdapter(listBeanList);
-
-
-
 		mLeftRvRecyclerView.setAdapter(leftAdapter);
 		mRightRvRecyclerView.setAdapter(rightAdapter);
 
@@ -80,11 +77,6 @@ public class MainActivity extends AppCompatActivity {
 			}
 		});
 
-
-
-
-
-
 	}
 
 	/**
@@ -102,12 +94,8 @@ public class MainActivity extends AppCompatActivity {
 		d3.setTitle("高血脂");
 
 		DrugListBean l1=new DrugListBean();
-
 		l1.setType("口服药");
-
-
 		DrugListBean l2=new DrugListBean();
-
 		l2.setType("胰岛素");
 
 		DrugItemBean b1=new DrugItemBean();
@@ -138,30 +126,17 @@ public class MainActivity extends AppCompatActivity {
 		List<DrugListBean> li1=new ArrayList<>();
 		List<DrugListBean> li2=new ArrayList<>();
 		List<DrugListBean> li3=new ArrayList<>();
-
 		li1.add(l1);
 		li2.add(l2);
 		li3.add(l1);
 		li3.add(l2);
-
 		d1.setmList(li1);
 		d2.setmList(li2);
 		d3.setmList(li3);
-
-
 		drugBeanList.add(d1);
 		drugBeanList.add(d2);
 		drugBeanList.add(d3);
 
-
 		listBeanList.addAll(drugBeanList.get(0).getmList());
-
-
-
-
-
-
-
-
 	}
 }
