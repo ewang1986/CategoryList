@@ -20,9 +20,6 @@ import java.util.List;
  * describe:  右边适配器
  */
 public class RightAdapter extends BaseQuickAdapter<DrugListBean>{
-
-
-
 	public RightAdapter(List<DrugListBean> data) {
 		super(R.layout.item_main_right, data);
 	}
@@ -49,8 +46,5 @@ public class RightAdapter extends BaseQuickAdapter<DrugListBean>{
 				return false;
 			}
 		});
-
-
-
 	}
 }
