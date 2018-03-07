@@ -42,14 +42,12 @@ public class MainActivity extends AppCompatActivity {
 		mRightRvRecyclerView = (RecyclerView) findViewById(R.id.main_right_rv);
 
 		initData();
-		leftAdapter=new LeftAdapter(drugBeanList);
-		rightAdapter=new RightAdapter(listBeanList);
+		leftAdapter = new LeftAdapter(drugBeanList);
+		rightAdapter = new RightAdapter(listBeanList);
 		mLeftRvRecyclerView.setAdapter(leftAdapter);
 		mRightRvRecyclerView.setAdapter(rightAdapter);
-
 		mLeftRvRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 		mRightRvRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-
 		mLeftRvRecyclerView.addOnItemTouchListener(new SimpleClickListener() {
 			@Override
 			public void onItemClick(BaseQuickAdapter baseQuickAdapter, View view, int i) {
@@ -76,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
 
 			}
 		});
-
 	}
 
 	/**
@@ -85,7 +82,6 @@ public class MainActivity extends AppCompatActivity {
 	private void initData() {
 		drugBeanList=new ArrayList<>();
 		listBeanList=new ArrayList<>();
-
 		DrugBean d1=new DrugBean();
 		d1.setTitle("糖尿病");
 		DrugBean d2=new DrugBean();
@@ -110,7 +106,12 @@ public class MainActivity extends AppCompatActivity {
 		b5.setName("阿卡波糖");
 		DrugItemBean b6=new DrugItemBean();
 		b6.setName("美卡素");
-
+		DrugItemBean b7=new DrugItemBean();
+		b7.setName("阿莫西林");
+		DrugItemBean b8=new DrugItemBean();
+		b8.setName("正红花油");
+		DrugItemBean b9=new DrugItemBean();
+		b9.setName("感康");
 		List<DrugItemBean> list1=new ArrayList<>();
 		List<DrugItemBean> list2=new ArrayList<>();
 		list1.add(b1);
@@ -119,10 +120,11 @@ public class MainActivity extends AppCompatActivity {
 		list1.add(b4);
 		list2.add(b5);
 		list2.add(b6);
-
+		list2.add(b7);
+		list2.add(b8);
+		list2.add(b9);
 		l1.setmList(list1);
 		l2.setmList(list2);
-
 		List<DrugListBean> li1=new ArrayList<>();
 		List<DrugListBean> li2=new ArrayList<>();
 		List<DrugListBean> li3=new ArrayList<>();
@@ -136,7 +138,6 @@ public class MainActivity extends AppCompatActivity {
 		drugBeanList.add(d1);
 		drugBeanList.add(d2);
 		drugBeanList.add(d3);
-
 		listBeanList.addAll(drugBeanList.get(0).getmList());
 	}
 }

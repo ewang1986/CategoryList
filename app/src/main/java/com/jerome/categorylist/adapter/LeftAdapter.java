@@ -34,9 +34,7 @@ public class LeftAdapter extends BaseQuickAdapter<DrugBean>{
 		}
 
 		helper.setText(R.id.item_main_left_type,bean.getTitle());
-
 	}
-
 
 	public int getSelectPos() {
 		return selectPos;
